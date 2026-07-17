@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema(
     email: { type: String, required: true, unique: true, lowercase: true },
     college: { type: String, required: true },
     password: { type: String, required: true, minlength: 6 },
-    role: { type: String, enum: ["student", "admin"], default: "student" },
+    role: { type: String, enum: ["student", "college_admin", "super_admin"], default: "student" },
     resetPasswordToken: String,
     resetPasswordExpire: Date,
   },
